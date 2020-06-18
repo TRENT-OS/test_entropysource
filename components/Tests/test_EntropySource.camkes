@@ -1,0 +1,17 @@
+/**
+ * Copyright (C) 2019-2020, Hensoldt Cyber GmbH
+ */
+
+import <if_OS_EntropySource.camkes>;
+
+component test_EntropySource {
+    control;
+
+    // For existing dummy component
+    uses        if_OS_EntropySource     entropySource_rpc;
+    dataport    Buf                     entropySource_dp;
+
+    // For our own implementation
+    uses        if_OS_EntropySource     myEntropy_rpc;
+    dataport    Buf                     myEntropy_dp;
+}

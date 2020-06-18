@@ -1,0 +1,33 @@
+/*
+ *  CAmkES configuration
+ *
+ *  Copyright (C) 2020, Hensoldt Cyber GmbH
+ */
+
+import <std_connector.camkes>;
+
+import <if_OS_EntropySource.camkes>;
+
+#include "EntropySource/camkes/EntropySource.camkes"
+DECLARE_COMPONENT_EntropySource(EntropySource)
+DECLARE_COMPONENT_EntropySource(MyEntropy)
+
+import "components/Tests/test_EntropySource.camkes";
+
+assembly {
+    composition {
+        component   test_EntropySource  unitTest;
+
+        DECLARE_AND_CONNECT_INSTANCE_EntropySource(
+            EntropySource,
+            entropySource,
+            unitTest.entropySource_rpc,
+            unitTest.entropySource_dp)
+
+        DECLARE_AND_CONNECT_INSTANCE_EntropySource(
+            MyEntropy,
+            myEntropy,
+            unitTest.myEntropy_rpc,
+            unitTest.myEntropy_dp)
+    }
+}
