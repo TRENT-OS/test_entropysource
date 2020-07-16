@@ -19,14 +19,16 @@ int run()
     static OS_Crypto_Config_t cfgDummy =
     {
         .mode = OS_Crypto_MODE_LIBRARY_ONLY,
-        .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(entropySource_rpc_read,
-                                                          entropySource_dp),
+        .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(
+            entropySource_rpc,
+            entropySource_dp),
     };
     static OS_Crypto_Config_t cfgOwn =
     {
         .mode = OS_Crypto_MODE_LIBRARY_ONLY,
-        .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(myEntropy_rpc_read,
-                                                          myEntropy_dp),
+        .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(
+            myEntropy_rpc,
+            myEntropy_dp),
     };
 
     TEST_SUCCESS(OS_Crypto_init(&hCrypto, &cfgDummy));
