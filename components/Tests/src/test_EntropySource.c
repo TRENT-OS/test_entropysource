@@ -14,7 +14,7 @@
 static OS_Crypto_Config_t cfgComp =
 {
     .mode = OS_Crypto_MODE_LIBRARY_ONLY,
-    .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(
+    .library.entropy = OS_CRYPTO_ASSIGN_Entropy(
         entropy_rpc,
         entropy_port),
 };
@@ -22,7 +22,7 @@ static OS_Crypto_Config_t cfgComp =
 static OS_Crypto_Config_t cfgOwn =
 {
     .mode = OS_Crypto_MODE_LIBRARY_ONLY,
-    .library.entropy = OS_CRYPTO_ASSIGN_EntropySource(
+    .library.entropy = OS_CRYPTO_ASSIGN_Entropy(
         myEntropy_rpc,
         myEntropy_dp),
 };
