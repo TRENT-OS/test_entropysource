@@ -21,8 +21,8 @@ assembly {
         DECLARE_AND_CONNECT_INSTANCE_EntropySource(
             EntropySource,
             entropySource,
-            unitTest.entropySource_rpc,
-            unitTest.entropySource_dp)
+            unitTest.entropy_rpc,
+            unitTest.entropy_port)
 
         DECLARE_AND_CONNECT_INSTANCE_EntropySource(
             MyEntropy,

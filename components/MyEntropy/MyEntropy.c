@@ -11,7 +11,7 @@
 
 #include <camkes.h>
 
-static OS_Dataport_t port = OS_DATAPORT_ASSIGN(entropySource_dp);
+static OS_Dataport_t port = OS_DATAPORT_ASSIGN(entropy_port);
 
 //------------------------------------------------------------------------------
 // Interface EntropySource
@@ -19,7 +19,7 @@ static OS_Dataport_t port = OS_DATAPORT_ASSIGN(entropySource_dp);
 
 //------------------------------------------------------------------------------
 size_t
-entropySource_rpc_read(
+entropy_rpc_read(
     const size_t len)
 {
     size_t sz;
