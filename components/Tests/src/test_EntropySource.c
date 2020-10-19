@@ -13,7 +13,7 @@
 // Use the EntropySource provided with TRENTOS-M
 static OS_Crypto_Config_t cfgComp =
 {
-    .mode = OS_Crypto_MODE_LIBRARY_ONLY,
+    .mode = OS_Crypto_MODE_LIBRARY,
     .entropy = IF_OS_ENTROPY_ASSIGN(
         entropy_rpc,
         entropy_port),
@@ -21,7 +21,7 @@ static OS_Crypto_Config_t cfgComp =
 // Use the EntropySource provided as part of this test
 static OS_Crypto_Config_t cfgOwn =
 {
-    .mode = OS_Crypto_MODE_LIBRARY_ONLY,
+    .mode = OS_Crypto_MODE_LIBRARY,
     .entropy = IF_OS_ENTROPY_ASSIGN(
         myEntropy_rpc,
         myEntropy_dp),
