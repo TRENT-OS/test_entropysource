@@ -23,12 +23,12 @@ DeclareCAmkESComponent(test_EntropySource
 )
 
 # Use the existing entropy source, which at this point is just some dummy
-DeclareCAmkESComponent_EntropySource(
+EntropySource_DeclareCAmkESComponent(
     EntropySource
 )
 
 # Use our own implementation of the EntropySource interface
-DeclareCAmkESComponent_EntropySource(
+EntropySource_DeclareCAmkESComponent(
     MyEntropy
     SOURCES
         "${CMAKE_CURRENT_SOURCE_DIR}/components/MyEntropy/MyEntropy.c"
