@@ -9,8 +9,8 @@ import <std_connector.camkes>;
 import <if_OS_Entropy.camkes>;
 
 #include "EntropySource/camkes/EntropySource.camkes"
-EntropySource_COMPONENT_DECLARE(EntropySource)
-EntropySource_COMPONENT_DECLARE(MyEntropy)
+EntropySource_COMPONENT_DEFINE(EntropySource)
+EntropySource_COMPONENT_DEFINE(MyEntropy)
 
 import "components/Tests/test_EntropySource.camkes";
 
