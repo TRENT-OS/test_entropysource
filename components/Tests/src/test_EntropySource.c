@@ -1,8 +1,8 @@
 #include "OS_Crypto.h"
 
-#include "LibMacros/Test.h"
+#include "lib_macros/Test.h"
 
-#include "LibDebug/Debug.h"
+#include "lib_debug/Debug.h"
 
 #include <stdlib.h>
 #include <stdint.h>
