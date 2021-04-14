@@ -13,5 +13,5 @@ component test_EntropySource {
 
     // For our own implementation
     uses        if_OS_Entropy           myEntropy_rpc;
-    dataport    Buf                     myEntropy_dp;
+    dataport    Buf                     myEntropy_port;
 }

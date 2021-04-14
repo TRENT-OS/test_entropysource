@@ -28,6 +28,6 @@ assembly {
         EntropySource_INSTANCE_CONNECT_CLIENT(
             myEntropy,
             unitTest.myEntropy_rpc,
-            unitTest.myEntropy_dp)
+            unitTest.myEntropy_port)
     }
 }

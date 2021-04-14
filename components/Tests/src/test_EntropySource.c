@@ -24,7 +24,7 @@ static OS_Crypto_Config_t cfgOwn =
     .mode = OS_Crypto_MODE_LIBRARY,
     .entropy = IF_OS_ENTROPY_ASSIGN(
         myEntropy_rpc,
-        myEntropy_dp),
+        myEntropy_port),
 };
 
 // Private Functions -----------------------------------------------------------
