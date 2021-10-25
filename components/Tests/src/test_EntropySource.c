@@ -1,3 +1,7 @@
+/*
+ * Copyright (C) 2020-2021, HENSOLDT Cyber GmbH
+ */
+
 #include "OS_Crypto.h"
 
 #include "lib_macros/Test.h"
