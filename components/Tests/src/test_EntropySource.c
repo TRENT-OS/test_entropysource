@@ -14,7 +14,7 @@
 
 #include <camkes.h>
 
-// Use the EntropySource provided with TRENTOS-M
+// Use the EntropySource provided with TRENTOS
 static OS_Crypto_Config_t cfgComp =
 {
     .mode = OS_Crypto_MODE_LIBRARY,
